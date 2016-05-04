@@ -13,6 +13,7 @@ using namespace Testing;
 
 int main() {
 
+    int getTest=0; 
     const int NumIters = 3;
 
     cout << endl << "Testing PA5!!" << endl << endl;
