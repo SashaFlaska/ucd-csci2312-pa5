@@ -16,22 +16,22 @@
 #include <sstream>
 
 namespace Testing {
-
+    
     using std::set;
     using std::ostream;
     using std::string;
-
+    
     class ErrorContext              // displays test results
     {
     public:
         ErrorContext(ostream &os);              // write header to stream
         void desc(const char *msg, int line);   // write line/description
         void desc(string msg, int line);
-
+        
         void result(bool good);                 // write test result
         ~ErrorContext();                        // write summary info
         bool ok() const;                        // true iff all tests passed
-
+        
     private:
         ostream &os;                            // output stream to use
         int passed;                             // # of tests which passed
@@ -40,7 +40,7 @@ namespace Testing {
         set<int> badlines;                      // line #'s of failed tests
         bool skip;                              // skip a line before title?
     };
-
+    
 }
 
 
